@@ -2,9 +2,9 @@
 
 - Router: se usó vuex para la manipulación de las rutas en este proyecto, en el archivo src/router/index se encuentra inicializado dicho router, se encontraran la declaración de rutas, y el caracteristico beforeEach para el control de acceso a las mismas. Se definieron rutas de caracter privado que requerian de autenticación y rutas a las que no se puede acceder teniendo una seseión activa.
 
-- Store: para este proyecto se uso PINIA para el manejo del estado, incluyendo uno de sus plugins pinia-plugin-persistedstate para manejar el localStorage desde el estado de manera mas sencilla. Estos dos modelos de store han sido integrados en una veriable global para su uso en toda la app.
+- Store: para este proyecto se uso PINIA para el manejo del estado, incluyendo uno de sus plugins pinia-plugin-persistedstate para manejar el localStorage desde el estado de manera mas sencilla. Estos dos modelos de store han sido integrados en una variable global para su uso en toda la app.
 
-- Vuetify: Decidí utilizar Vuetify 3 con Vue 3 por su perfecta integración con esta versión, aprovechando al máximo la Composition API y las mejoras de rendimiento. Su extensa biblioteca de componentes optimizados para accesibilidad y diseño responsivo agilizó el desarrollo, garantizando consistencia visual y una excelente experiencia de usuario. Además, su sistema de theming dinámico permitió personalizar fácilmente el diseño para alinearlo con la identidad del proyecto.
+- Vuetify 3: Decidí utilizar Vuetify 3 con Vue 3 por su perfecta integración con esta versión, aprovechando al máximo la Composition API y las mejoras de rendimiento. Su extensa biblioteca de componentes optimizados para accesibilidad y diseño responsivo agilizó el desarrollo, garantizando consistencia visual y una excelente experiencia de usuario. Además, su sistema de theming dinámico permitió personalizar fácilmente el diseño para alinearlo con la identidad del proyecto.
 
 - Axios: Uso Axios en este proyecto por su simplicidad para manejar solicitudes HTTP y su fácil integración con el ecosistema de vue. Con Axios Interceptors (src/middlewares), gestiono de forma centralizada tareas como agregar tokens de autenticación, manejar errores globales y transformar solicitudes o respuestas, lo que mejora la escalabilidad y mantiene el código limpio.
 
@@ -40,9 +40,8 @@ npm run dev
 
 ## Requisitos
 
-Asegúrate de tener instalados los siguientes requisitos antes de usar el script:
+Asegúrate de tener instalados los siguientes requisitos antes de usar el proyecto:
 
 - **Node.js** (v16 o superior)
 - **npm** 
-- **Vite** como herramienta de construcción.
 
