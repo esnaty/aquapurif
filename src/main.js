@@ -27,7 +27,7 @@ app.config.globalProperties.$store = {persist: usePersistStore(), unpersist: use
 app.config.globalProperties.$rules = {
     required: (v) => !!v || 'El campo es requerido',
     requiredOne: (v) => !!v.length || 'Debe seleccionar al menos una opción',
-    minCharacters: (v, min) => !!(v.length > min) || `Minimo ${min} caracteres`,
+    minCharacters: (v, min) => !!(v.length >= min) || `Minimo ${min} caracteres`,
     onlyNumbers: (v) => /^\d*$/.test(v) || 'Solo se permiten números.',
     maxLength: (v, max) => (v && v.length <= max) || `Máximo ${max} dígitos`,
 }

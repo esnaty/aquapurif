@@ -43,7 +43,7 @@
                                 density="compact"
                                 hide-details="auto"
                                 class="mb-2"
-                                :rules="[$rules.required]"
+                                :rules="[$rules.required, $rules.minCharacters(password ?? '', 6)]"
                             ></v-text-field>
                             
                             <v-text-field
