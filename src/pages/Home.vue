@@ -18,13 +18,19 @@
             <strong>¡No dejes pasar esta oportunidad de cuidar tu salud y la de tu familia!</strong>
           </p>
           <p class="font-weight-thin" style="font-size: 1.2rem" v-else>
-            ¡GRACIAS POR SER PARTE DE AQUAPURIF! Tu próxima entrega está programada para el día <strong>02/02/2025</strong>
+            <span v-if="$store.persist.user.plan">
+              ¡GRACIAS POR SER PARTE DE AQUAPURIF! Tu próxima entrega está programada para el día <strong>02/02/2025</strong>
+            </span>
+
+            <span v-else>
+              Aún no te has suscrito a ninguno de nuestros planes
+            </span>
           </p>
 
           <v-row no-gutters class="justify-center mt-md-8 mt-4">
             <v-btn class="glow-btn text-capitalize px-15" color="green" size="x-large" 
                     @click="$router.push(`/${$store.persist.user.logged ? 'prices' : 'register'}`)">
-              {{$store.persist.user.logged ? 'Adelantar' : '¡Suscríbete ahora!'}}
+              {{$store.persist.user.logged && $store.persist.user.plan ? 'Adelantar' : '¡Suscríbete ahora!'}}
             </v-btn>
           </v-row>
         </div>

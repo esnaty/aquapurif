@@ -70,7 +70,6 @@ const open = (titleText, messageText, button1Text = null, button2Text = null) =>
   dialog.value = true;
   title.value = titleText || title.value;
   message.value = messageText || message.value;
-  message2.value = message2Text || null;
   button1.value = button1Text || "Cancelar";
   button2.value = button2Text || "Aceptar";
 

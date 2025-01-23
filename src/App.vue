@@ -173,6 +173,9 @@ const menu = computed(() => {
   if(!store.persist.user.logged){
     //el "suscribete" solo aparece en caso de que no haya login ya que es la página de registro
     menu.push({title: 'Suscríbete', to: '/register', icon: 'mdi-account-plus'},)
+  }else{
+    //"Mi Cuenta" solo aparece si hay una sesión activa
+    menu.push({title: 'Mi Cuenta', to: '/account', icon: 'mdi-account'},)
   }
 
   return menu
