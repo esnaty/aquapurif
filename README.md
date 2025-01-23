@@ -2,7 +2,7 @@
 
 - Router: se usó vuex para la manipulación de las rutas en este proyecto, en el archivo src/router/index se encuentra inicializado dicho router, se encontraran la declaración de rutas, y el caracteristico beforeEach para el control de acceso a las mismas. Se definieron rutas de caracter privado que requerian de autenticación y rutas a las que no se puede acceder teniendo una sesión activa.
 
-- Store: para este proyecto se uso PINIA para el manejo del estado, incluyendo uno de sus plugins pinia-plugin-persistedstate para manejar el localStorage desde el estado de manera mas sencilla. Estos dos modelos de store han sido integrados en una variable global para su uso en toda la app.
+- Store: para este proyecto se usó PINIA para el manejo del estado, incluyendo uno de sus plugins pinia-plugin-persistedstate para manejar el localStorage desde el estado de manera mas sencilla. Estos dos modelos de store han sido integrados en una variable global para su uso en toda la app.
 
 - Vuetify 3: Decidí utilizar Vuetify 3 con Vue 3 por su perfecta integración con esta versión, aprovechando al máximo la Composition API y las mejoras de rendimiento. Su extensa biblioteca de componentes optimizados para accesibilidad y diseño responsivo agilizó el desarrollo, garantizando consistencia visual y una excelente experiencia de usuario. Además, su sistema de theming dinámico permitió personalizar fácilmente el diseño para alinearlo con la identidad del proyecto.
 
