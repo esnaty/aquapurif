@@ -38,7 +38,11 @@
             <v-col :cols="($vuetify.display.mdAndDown) ? 9 : 4">
               <!-- logo principal -->
               <transition name="fade-in">
-                <v-img :src="`${$store.persist.FolderTheme}/Logo_Hz.png`" style="max-width: 10rem !important;" class="mx-2" v-if="mountedDOM"></v-img>
+                <v-img :src="`${$store.persist.FolderTheme}/Logo_Hz.png`" 
+                      style="max-width: 10rem !important; cursor: pointer;" 
+                      class="mx-2" v-if="mountedDOM"
+                      @click="$router.push('/')"
+                ></v-img>
               </transition>
             </v-col>
 
