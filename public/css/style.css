@@ -1,0 +1,94 @@
+/*La misma letra que uso para el logo*/
+*{
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* Botón personalizado */
+.glow-btn {
+    position: relative;
+    overflow: hidden; /* Evita que el brillo salga del botón */
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+  
+/* Efecto de brillo */
+.glow-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%; /* Inicia fuera del botón */
+    width: 200%; /* Asegura el brillo suficiente para cubrir todo el botón */
+    height: 100%;
+    background: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.5) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    transform: skewX(-30deg); /* Da un ángulo al brillo */
+    animation: shine 2s infinite; /* Animación continua */
+}
+  
+/* Efecto hover */
+.glow-btn:hover {
+    background-color: #0056b3; /* Oscurece el color en hover */
+}
+  
+/* Animación de brillo */
+@keyframes shine {
+    0% {
+      left: -100%; /* Comienza a la izquierda */
+    }
+    100% {
+      left: 100%; /* Termina a la derecha */
+    }
+}
+
+
+/* Aplicación de entrada suave */
+.fade-in-enter-active {
+  animation: fadeIn ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* animacion de entrada desde arriba */
+.ontop-fade-enter-active {
+  animation: fadeInOnTop ease-in;
+}
+
+@keyframes fadeInOnTop {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* animacion de entrada desde abajo */
+.onbottom-fade-enter-active {
+  animation: fadeInOnBottom ease-in;
+}
+
+@keyframes fadeInOnBottom {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
